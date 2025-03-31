@@ -19,7 +19,8 @@
         <div class="input-section">
             <div class="input-group">
                 <label for="numProcesses">Number of Processes:</label>
-                <input type="number" id="numProcesses" min="1" value="3" onchange="generateInputs()">
+                <input type="number" id="numProcesses" min="1" value="3">
+                <button onclick="generateInputs()" class="generate-btn">Generate</button>
             </div>
             <div id="processInputsContainer"></div>
             <button onclick="calculateSJF()" class="calculate-btn">Calculate</button>
