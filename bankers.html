@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banker's Algorithm - OS Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="algorithm.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-header">
+            <a href="index.html" class="back-button">
+                <span class="back-arrow">←</span> Back to Home
+            </a>
+            <h1>Banker's Algorithm</h1>
+            <p class="algorithm-description">Deadlock Avoidance Safety Checker</p>
+        </div>
+        
+        <div class="input-section">
+            <div class="section-header">
+                <h2>System Resources</h2>
+                <p>Configure the number of resources and processes</p>
+            </div>
+
+            <div class="resource-inputs card">
+                <div class="input-group">
+                    <label for="numResources">Number of Resources:</label>
+                    <input type="number" id="numResources" min="1" max="5" value="3" class="number-input">
+                </div>
+                <div class="input-group">
+                    <label for="numProcesses">Number of Processes:</label>
+                    <input type="number" id="numProcesses" min="1" max="10" value="3" class="number-input">
+                </div>
+                <button onclick="generateInputs()" class="generate-btn">Generate Tables</button>
+            </div>
+
+            <div id="resourceContainer" class="resource-container">
+                <div class="matrix-section">
+                    <h3>Available Resources</h3>
+                    <div id="availableResources" class="matrix-container"></div>
+                </div>
+                
+                <div class="matrix-section">
+                    <h3>Maximum Need</h3>
+                    <p class="matrix-description">Maximum resources that might be needed by each process</p>
+                    <div id="maxNeedMatrix" class="matrix-container"></div>
+                </div>
+                
+                <div class="matrix-section">
+                    <h3>Currently Allocated</h3>
+                    <p class="matrix-description">Resources currently allocated to each process</p>
+                    <div id="allocationMatrix" class="matrix-container"></div>
+                </div>
+            </div>
+
+            <button onclick="checkSafety()" class="calculate-btn">Check System Safety</button>
+        </div>
+
+        <div class="output-section">
+            <div class="section-header">
+                <h2>Results</h2>
+                <p>System safety analysis results</p>
+            </div>
+            <div id="results" class="results-container"></div>
+        </div>
+    </div>
+    <script src="bankers.js"></script>
+</body>
+</html> 

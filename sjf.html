@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Job First (SJF) Scheduling</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="algorithm.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-header">
+            <a href="index.html" class="back-button">
+                <span class="back-arrow">←</span> Back to Home
+            </a>
+            <h1>Shortest Job First (SJF) Scheduling</h1>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="numProcesses">Number of Processes:</label>
+                <input type="number" id="numProcesses" min="1" value="3" onchange="generateInputs()">
+            </div>
+            <div id="processInputsContainer"></div>
+            <button onclick="calculateSJF()" class="calculate-btn">Calculate</button>
+        </div>
+        
+        <div class="output-section">
+            <div id="ganttChart"></div>
+            <div id="results"></div>
+        </div>
+    </div>
+    <script src="sjf.js"></script>
+</body>
+</html> 

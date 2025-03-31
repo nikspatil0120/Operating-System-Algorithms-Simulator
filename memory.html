@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Allocation - OS Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="algorithm.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-header">
+            <a href="index.html" class="back-button">
+                <span class="back-arrow">←</span> Back to Home
+            </a>
+            <h1>Memory Allocation</h1>
+        </div>
+        
+        <div class="input-section">
+            <!-- Memory Blocks Section -->
+            <div class="memory-section">
+                <h2>Memory Blocks</h2>
+                <div class="input-group">
+                    <label for="numBlocks">Number of Memory Blocks:</label>
+                    <input type="number" id="numBlocks" min="1" max="10" value="5">
+                    <button onclick="generateMemoryInputs()">Generate Memory Blocks</button>
+                </div>
+                <div id="memoryInputs"></div>
+            </div>
+
+            <!-- Process Section (initially hidden) -->
+            <div id="processSection" style="display: none;">
+                <h2>Process Requests</h2>
+                <div class="input-group">
+                    <label for="numProcesses">Number of Processes:</label>
+                    <input type="number" id="numProcesses" min="1" max="10" value="3">
+                    <button onclick="generateProcessInputs()">Generate Process Inputs</button>
+                </div>
+                <div id="processInputs"></div>
+            </div>
+
+            <div class="input-group" style="margin-top: 20px;">
+                <label for="algorithm">Allocation Algorithm:</label>
+                <select id="algorithm">
+                    <option value="firstFit">First Fit</option>
+                    <option value="bestFit">Best Fit</option>
+                    <option value="worstFit">Worst Fit</option>
+                </select>
+            </div>
+
+            <button id="calculateBtn" onclick="allocateMemory()" class="calculate-btn" style="display: none;">
+                Allocate Memory
+            </button>
+        </div>
+
+        <div class="output-section">
+            <h2>Results</h2>
+            <div id="results"></div>
+        </div>
+    </div>
+    <script src="memory.js"></script>
+</body>
+</html> 

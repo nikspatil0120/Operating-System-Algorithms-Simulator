@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Algorithms Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="algorithm.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-header">
+            <h1>Operating System Algorithms Simulator</h1>
+            <p class="subtitle">Interactive simulations of OS scheduling and resource management algorithms</p>
+        </div>
+        
+        <div class="algorithm-grid">
+            <div class="category">
+                <div class="category-header">
+                    <h2>CPU Scheduling</h2>
+                    <p>Explore different process scheduling algorithms</p>
+                </div>
+                <div class="algo-cards">
+                    <a href="fcfs.html" class="algo-card card-1">
+                        <h3>First Come First Serve (FCFS)</h3>
+                        <p>Non-preemptive scheduling algorithm</p>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="sjf.html" class="algo-card card-2">
+                        <h3>Shortest Job First (SJF)</h3>
+                        <p>Non-preemptive scheduling algorithm</p>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="srtn.html" class="algo-card card-3">
+                        <h3>Shortest Remaining Time Next (SRTN)</h3>
+                        <p>Preemptive version of SJF</p>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="rr.html" class="algo-card card-4">
+                        <h3>Round Robin</h3>
+                        <p>Preemptive scheduling with time quantum</p>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="priority.html" class="algo-card card-5">
+                        <h3>Priority Scheduling</h3>
+                        <p>Both preemptive and non-preemptive versions</p>
+                        <span class="card-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-header">
+                    <h2>Resource Management</h2>
+                    <p>Simulate memory and resource allocation algorithms</p>
+                </div>
+                <div class="algo-cards">
+                    <a href="bankers.html" class="algo-card card-6">
+                        <h3>Banker's Algorithm</h3>
+                        <p>Deadlock avoidance algorithm</p>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="memory.html" class="algo-card card-7">
+                        <h3>Memory Allocation</h3>
+                        <p>First-fit, Best-fit, Worst-fit</p>
+                        <span class="card-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priority Scheduling - OS Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="algorithm.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-header">
+            <a href="index.html" class="back-button">
+                <span class="back-arrow">←</span> Back to Home
+            </a>
+            <h1>Priority Scheduling</h1>
+        </div>
+        
+        <div class="input-section">
+            <h2>Input Processes</h2>
+            <div class="process-inputs">
+                <div class="input-group">
+                    <label for="numProcesses">Number of Processes:</label>
+                    <input type="number" id="numProcesses" min="1" max="10" value="3">
+                    <button onclick="generateProcessInputs()">Generate</button>
+                </div>
+                <div id="processInputsContainer"></div>
+                <button onclick="calculatePriority()" class="calculate-btn">Calculate</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>Results</h2>
+            <div id="ganttChart"></div>
+            <div id="results"></div>
+        </div>
+    </div>
+    <script src="priority.js"></script>
+</body>
+</html> 
