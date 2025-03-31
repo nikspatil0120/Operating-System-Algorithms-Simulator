@@ -1,4 +1,4 @@
-function generateInputs() {
+function generateProcessInputs() {
     const numProcesses = parseInt(document.getElementById('numProcesses').value);
     const container = document.getElementById('processInputsContainer');
     
@@ -236,4 +236,4 @@ function updateReadyQueue(currentTime, processes, executingProcess) {
     queueItems.innerHTML = html;
 }
 
-window.onload = () => generateInputs(); 
+window.onload = () => generateProcessInputs(); 
